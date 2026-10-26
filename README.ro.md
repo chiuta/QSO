@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.0.1 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,6 +18,7 @@ QSO este un jurnal de stație offline, neoficial, pentru radioamatori: înregist
 2. **Jurnal** → completează formularul și apasă „Salvează” (sau `Ctrl+Enter`). Ceasul UTC este permanent în antet; „Ceas live” ține data/ora la zi, „Acum” le resetează. Frecvența alege banda; modul alege RST-ul implicit (59 / 599 / −10 pentru FT8, FT4).
 3. Indicativul este validat formal pe loc (YO/YP/YQ/YR + cifră + 1–3 litere; formate internaționale generale, prefixe portabile `OH0/YO3ABC`, sufixe `/P`, `/M`, `/MM`); apar țara (din tabelul intern) și avertizarea de duplicat.
 4. **Concurs** → bifează „Mod concurs”, scrie CONTEST_ID; numărul de ordine (STX) se completează automat, iar „dupe” se judecă pe concurs (aceeași stație, bandă și grup de moduri CW/PH/DG).
+   **Scor în timp real (2.0)**: în caseta „Concurs” alegi regulile (puncte fixe, după mod sau la fiecare N km; multiplicatori: entități, prefixe WPX, câmpuri/pătrate de locator sau schimb primit, opțional pe bandă). Panoul arată QSO valide, duplicate, multiplicatori, scorul și ritmul (10/60 min), iar Cabrillo primește `CLAIMED-SCORE` și schimbul complet. Calcul orientativ, nu după regulamentul oficial al unui concurs anume.
 5. Tabelul: căutare fără diacritice, filtre (bandă, mod, an, QSL, duplicate), sortare, **editare în rând** (buton „Editează” sau dublu clic), detalii (inclusiv câmpurile ADIF necunoscute), ștergere cu confirmare, ștergerea selecției, **anulare/refacere**, tipărire (CSS de print).
 6. **Mod câmp** (`Alt+K`): formular mare, funcționează fără mouse (`Alt+C` indicativ, `Alt+B`/`Alt+M` bandă/mod, `Ctrl+Enter` salvare, `Alt+Z`/`Alt+Y` anulare/refacere, `Alt+1…5` secțiuni, `Alt+H` lista completă), ceas UTC mare permanent și protecție la închiderea accidentală a paginii.
 7. **Calcule**: distanță/azimut între doi locatori, locator ↔ coordonate, ora locală și răsărit/apus aproximative, prefix → țară.
@@ -66,3 +67,7 @@ MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 
 - **1.0.0 — 2026-10-14:** prima versiune.
 - **1.0.1 — 2026-10-19:** buton „Vezi în TerRa” în dialogul Detalii QSO (locatorul corespondentului + ora QSO, fără cereri de rețea).
+- **1.0.2 — 2026-10-22:** mesaj în subsol și notificare „Gata pentru offline” după ce service worker-ul a pus aplicația în cache (prima încărcare); exportul CSV neutralizează celulele care încep cu = + - @ (și tab/CR) împotriva injecției de formule în foi de calcul, iar importul CSV scoate din nou apostroful; text de cel puțin 12 px; ținte tactile de cel puțin 24 px; eticheta tehnică listează cele 8 limbi.
+- **1.0.3 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 cu 600.000 de iterații, protecție anti-clickjacking.
+- **1.0.4 — 2026-10-22:** fff-kit 1.1.4: ținte tactile și text minim în interfața comună.
+- **1.0.6 — 2026-10-23:** mesaj de rezervă când JavaScript este dezactivat (noscript).

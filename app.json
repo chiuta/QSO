@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "qso",
   "name": "QSO — jurnal radioamator",
-  "version": "1.0.1",
-  "updated": "2026-10-19",
+  "version": "2.0.0",
+  "updated": "2026-10-26",
   "description": "QSO: jurnal de stație radioamator offline, neoficial — ADIF 3.1 import/export, locatori Maidenhead, distanțe, statistici, Cabrillo de bază. Fără cont, fără telemetrie.",
   "egress": [],
   "permissions": [
@@ -11,8 +11,8 @@
     "localStorage"
   ],
   "storageKeys": [],
-  "sizeBytes": 258853,
-  "sha256": "46767690b4c22eb63fdecd97a73326b8041c85b1f7e5954f8559855f92e12a46",
+  "sizeBytes": 321488,
+  "sha256": "4b33e0d70856a36c0656340df2a8e5639f36d0911c8225750a1f4241962271f4",
   "csp": {
     "present": true,
     "directives": {
@@ -36,21 +36,34 @@
   "features": {
     "export": true,
     "import": true,
-    "i18n": [],
+    "i18n": [
+      "ro",
+      "en",
+      "fr",
+      "it",
+      "es",
+      "pt",
+      "hu",
+      "de"
+    ],
     "pwa": {
       "manifest": true,
       "serviceWorker": true
     },
     "modules": [
       "core",
+      "store",
+      "dialog",
       "label",
       "bundle"
     ]
   },
   "kit": {
-    "version": "1.1.1",
+    "version": "1.2.0",
     "modules": [
       "core",
+      "store",
+      "dialog",
       "label",
       "bundle"
     ]

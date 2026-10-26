@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.0.1 · **Last updated:** 2026-10-19
+**Version:** 2.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -30,7 +30,7 @@ QSO is an unofficial, offline station log for radio amateurs: you record contact
 - It does not check the licence, the real-world validity of a callsign, or the validity of a contact for awards or contests. It does not connect to QRZ, LoTW, eQSL, Club Log, etc. (it has no network).
 - **Sunrise/sunset**: a simple formula (simplified NOAA, refraction 0.833°), typical error of a few minutes; the local time is mean solar time (longitude/15), not the official time zone, and does not include daylight saving time.
 - **Distances**: sphere R = 6371.0088 km, from the centre of the locator square; with 4 characters the error can reach tens to hundreds of km. It is not a distance on the ellipsoid.
-- **Cabrillo** 3.0: only the header + QSO lines in a generic form (frequency in kHz, mode CW/PH/FM/RY/DG, exchange from STX/SRX or STX_STRING/SRX_STRING). Exchange formats differ from contest to contest; check the rules and correct manually. It does not compute scores.
+- **Cabrillo** 3.0: only the header + QSO lines in a generic form (frequency in kHz, mode CW/PH/FM/RY/DG, exchange from STX/SRX or STX_STRING/SRX_STRING). Exchange formats differ from contest to contest; check the rules and correct manually. Since 2.0 a configurable real-time contest score (points per QSO/mode/km, multipliers by entity, WPX prefix, locator square or received exchange, dupes excluded, rate) is shown and written as `CLAIMED-SCORE`; it follows the rules you set, not any official contest rulebook.
 - **ADIF**: lengths are read in UTF-8 bytes (with a fallback to characters if the file is inconsistent, flagged in the report). Unknown fields and `APP_*` are kept and re-exported; the USERDEFs in the header are not interpreted and not all enumerations are validated (e.g. DXCC, STATE). `*_INTL` fields are not treated specially. ADX: basic import/export.
 - No map with continent outlines (no external data is loaded): the map shows the QSO points by direction and distance.
 - The data lives in `localStorage`; clearing the site data in the browser deletes the log. Make regular backups (`.fff.json` or ADIF). For tens of thousands of QSOs the browser limit (~5 MB) can become a problem.
@@ -66,3 +66,7 @@ MIT — see the `LICENSE` file at the root of the repository.
 
 - **1.0.0 — 2026-10-14:** first version.
 - **1.0.1 — 2026-10-19:** "See in TerRa" button in the QSO Details dialog (the correspondent's locator + the QSO time, no network requests).
+- **1.0.2 — 2026-10-22:** footer message and notice “Ready for offline use” once the service worker has precached the app (first load); CSV export neutralises cells starting with = + - @ (and tab/CR) against spreadsheet formula injection, and CSV import removes that apostrophe again; text of at least 12 px; touch targets of at least 24 px; the technical label lists all 8 languages.
+- **1.0.3 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 with 600,000 iterations, anti-clickjacking protection.
+- **1.0.4 — 2026-10-22:** fff-kit 1.1.4: touch targets and minimum text size in the shared interface.
+- **1.0.6 — 2026-10-23:** fallback message when JavaScript is disabled (noscript).
