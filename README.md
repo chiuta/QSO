@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.0.1 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete (no network requests)
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +64,12 @@ The interface is available in Romanian (default), English, French, Italian, Span
 
 MIT — see the `LICENSE` file at the root of the repository.
 
+## Uploading to LoTW / eQSL / Club Log and the DXCC table (status on 2026-10-27)
+
+- **Uploading** to LoTW, eQSL or Club Log is **not done from the app** (the app has no network, `connect-src 'none'`). Export ADIF (`.adi`) and upload the file manually on the respective site. LoTW requires prior signing with the TQSL program (your own certificate); eQSL and Club Log accept ADIF through their web interfaces. Current requirements must be **checked on those sites** — they are not validated here. The note also appears in the Import/Export tab.
+- **Complete DXCC table (from `cty.dat`): planned, not implemented.** The internal table stays partial (~220 entities). `cty.dat` (Country Files) could not be downloaded in the environment of this update and its licence/redistribution terms **could not be verified** ("to be checked"); no data reconstructed from memory was included. Planned steps: check the licence, parse `cty.dat` (prefixes, `=CALL` exceptions, CQ/ITU zones, `(n)`/`[n]` overrides), generate a compact embedded table.
+- **Cabrillo**: basic export and the configurable score have existed since 2.0.0; contest-specific exchange formats still need manual checking.
+
 ## History
 
 - **1.0.0 — 2026-10-14:** first version.
@@ -70,3 +78,4 @@ MIT — see the `LICENSE` file at the root of the repository.
 - **1.0.3 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 with 600,000 iterations, anti-clickjacking protection.
 - **1.0.4 — 2026-10-22:** fff-kit 1.1.4: touch targets and minimum text size in the shared interface.
 - **1.0.6 — 2026-10-23:** fallback message when JavaScript is disabled (noscript).
+- **2.0.1 — 2026-10-27 (previous: 2.0.0):** text only: note on manual upload to LoTW/eQSL/Club Log in the Import/Export tab; status and offline mode in the README; the complete DXCC table remains planned.

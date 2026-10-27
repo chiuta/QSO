@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet (fără cereri de rețea)
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -63,6 +65,12 @@ Interfața este disponibilă în română (implicit), engleză, franceză, itali
 
 MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 
+## Încărcare către LoTW / eQSL / Club Log și tabel DXCC (stare la 2026-10-27)
+
+- **Încărcarea** către LoTW, eQSL sau Club Log **nu se face din aplicație** (aplicația nu are rețea, `connect-src 'none'`). Exportă ADIF (`.adi`) și încarcă fișierul manual pe site-ul respectiv. LoTW cere semnarea prealabilă cu programul TQSL (certificatul tău); eQSL și Club Log primesc ADIF prin interfețele lor web. Cerințele actuale se **verifică pe site-urile lor** — nu sunt validate aici. Nota apare și în fila Import/Export.
+- **Tabel DXCC complet (din `cty.dat`): planificat, neimplementat.** Tabelul intern rămâne parțial (~220 entități). `cty.dat` (Country Files) nu a putut fi descărcat din mediul acestei actualizări, iar licența/condițiile de redistribuire **nu au putut fi verificate** („de verificat”); nu am inclus date reconstituite din memorie. Pași planificați: verificarea licenței, parsare `cty.dat` (prefixe, excepții `=CALL`, zone CQ/ITU, `(n)`/`[n]`), generarea unui tabel compact încorporat.
+- **Cabrillo**: exportul de bază și scorul configurabil există deja din 2.0.0; formatele de schimb specifice concursurilor rămân de verificat manual.
+
 ## Istoric
 
 - **1.0.0 — 2026-10-14:** prima versiune.
@@ -71,3 +79,4 @@ MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 - **1.0.3 — 2026-10-22:** fff-kit 1.1.2: PBKDF2 cu 600.000 de iterații, protecție anti-clickjacking.
 - **1.0.4 — 2026-10-22:** fff-kit 1.1.4: ținte tactile și text minim în interfața comună.
 - **1.0.6 — 2026-10-23:** mesaj de rezervă când JavaScript este dezactivat (noscript).
+- **2.0.1 — 2026-10-27 (anterior: 2.0.0):** doar texte: notă despre încărcarea manuală către LoTW/eQSL/Club Log în fila Import/Export; stare și mod offline în README; tabelul DXCC complet rămâne planificat.
