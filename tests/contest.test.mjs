@@ -83,7 +83,8 @@ ok(/CLAIMED-SCORE: 6\r?\n/.test(cab), "CLAIMED-SCORE = scorul din panou (6)");
 const q = cab.split(/\r?\n/).filter(l => l.startsWith("QSO:"));
 eq(q.length, 3, "3 linii QSO");
 ok(/YO3XYZ +599 +001 +05 +DL1ABC +599 +005 +14/.test(q[0]), "linia QSO conține schimbul trimis (nr+șir) și primit: " + q[0]);
-ok(/QSO 2\.0\.0/.test(cab), "CREATED-BY actualizat");
+const __v = JSON.parse(fs.readFileSync(path.resolve(__dir, "..", "app.json"), "utf8")).version;
+ok(cab.includes("CREATED-BY: QSO " + __v + " "), "CREATED-BY actualizat (" + __v + ")");
 // persistență + reîncărcare
 await p.waitForTimeout(400);
 await p.reload(); await p.waitForFunction(() => window.__qso);
