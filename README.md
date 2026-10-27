@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.1 · **Last updated:** 2026-10-27
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete (no network requests)
 
@@ -68,7 +68,8 @@ MIT — see the `LICENSE` file at the root of the repository.
 
 - **Uploading** to LoTW, eQSL or Club Log is **not done from the app** (the app has no network, `connect-src 'none'`). Export ADIF (`.adi`) and upload the file manually on the respective site. LoTW requires prior signing with the TQSL program (your own certificate); eQSL and Club Log accept ADIF through their web interfaces. Current requirements must be **checked on those sites** — they are not validated here. The note also appears in the Import/Export tab.
 - **Complete DXCC table (from `cty.dat`): planned, not implemented.** The internal table stays partial (~220 entities). `cty.dat` (Country Files) could not be downloaded in the environment of this update and its licence/redistribution terms **could not be verified** ("to be checked"); no data reconstructed from memory was included. Planned steps: check the licence, parse `cty.dat` (prefixes, `=CALL` exceptions, CQ/ITU zones, `(n)`/`[n]` overrides), generate a compact embedded table.
-- **Cabrillo**: basic export and the configurable score have existed since 2.0.0; contest-specific exchange formats still need manual checking.
+- **Cabrillo (2.1.0)**: extended header following the Cabrillo v3 specification (CATEGORY-ASSISTED/STATION/TIME/TRANSMITTER, LOCATION, CLUB, EMAIL, OPERATORS, ADDRESS, SOAPBOX; empty fields are not written) and **import** of `.log`/`.cbr` files with a warning: the exchange differs per contest and is split heuristically (first callsign-like word after the RST), PH is imported as SSB, DG gets no mode. Contest-specific Cabrillo (fixed exchange formats) still needs manual checking; **uploading** to LoTW/eQSL needs accounts/TQSL signing and is not done by the app.
+- **DXCC / `cty.dat`: still not implemented** — on 2026-10-27 `country-files.com` is unreachable from the working environment (proxy 403), and the table is not reconstructed from memory.
 
 ## History
 
@@ -79,3 +80,4 @@ MIT — see the `LICENSE` file at the root of the repository.
 - **1.0.4 — 2026-10-22:** fff-kit 1.1.4: touch targets and minimum text size in the shared interface.
 - **1.0.6 — 2026-10-23:** fallback message when JavaScript is disabled (noscript).
 - **2.0.1 — 2026-10-27 (previous: 2.0.0):** text only: note on manual upload to LoTW/eQSL/Club Log in the Import/Export tab; status and offline mode in the README; the complete DXCC table remains planned.
+- **2.1.0 — 2026-10-27:** Cabrillo: additional header fields and `.log`/`.cbr` import (heuristic, with warning); tests in `tests/cabrillo.test.mjs`. The complete DXCC table remains planned (`cty.dat` unreachable).

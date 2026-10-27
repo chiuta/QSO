@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet (fără cereri de rețea)
 
@@ -69,7 +69,8 @@ MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 
 - **Încărcarea** către LoTW, eQSL sau Club Log **nu se face din aplicație** (aplicația nu are rețea, `connect-src 'none'`). Exportă ADIF (`.adi`) și încarcă fișierul manual pe site-ul respectiv. LoTW cere semnarea prealabilă cu programul TQSL (certificatul tău); eQSL și Club Log primesc ADIF prin interfețele lor web. Cerințele actuale se **verifică pe site-urile lor** — nu sunt validate aici. Nota apare și în fila Import/Export.
 - **Tabel DXCC complet (din `cty.dat`): planificat, neimplementat.** Tabelul intern rămâne parțial (~220 entități). `cty.dat` (Country Files) nu a putut fi descărcat din mediul acestei actualizări, iar licența/condițiile de redistribuire **nu au putut fi verificate** („de verificat”); nu am inclus date reconstituite din memorie. Pași planificați: verificarea licenței, parsare `cty.dat` (prefixe, excepții `=CALL`, zone CQ/ITU, `(n)`/`[n]`), generarea unui tabel compact încorporat.
-- **Cabrillo**: exportul de bază și scorul configurabil există deja din 2.0.0; formatele de schimb specifice concursurilor rămân de verificat manual.
+- **Cabrillo (2.1.0)**: antet extins conform specificației Cabrillo v3 (CATEGORY-ASSISTED/STATION/TIME/TRANSMITTER, LOCATION, CLUB, EMAIL, OPERATORS, ADDRESS, SOAPBOX; câmpurile goale nu se scriu) și **import** de fișiere `.log`/`.cbr` cu avertisment: schimbul diferă de la concurs la concurs și e separat euristic (primul cuvânt care arată a indicativ după RST), PH se importă ca SSB, DG rămâne fără mod. Cabrillo specific unui anumit concurs (formate de schimb fixe) rămâne de verificat manual; **încărcarea** către LoTW/eQSL cere conturi/semnare TQSL și nu se face din aplicație.
+- **DXCC / `cty.dat`: tot neimplementat** — și la 2026-10-27 `country-files.com` este inaccesibil din mediul de lucru (proxy 403), iar tabelul nu se reconstituie din memorie.
 
 ## Istoric
 
@@ -80,3 +81,4 @@ MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 - **1.0.4 — 2026-10-22:** fff-kit 1.1.4: ținte tactile și text minim în interfața comună.
 - **1.0.6 — 2026-10-23:** mesaj de rezervă când JavaScript este dezactivat (noscript).
 - **2.0.1 — 2026-10-27 (anterior: 2.0.0):** doar texte: notă despre încărcarea manuală către LoTW/eQSL/Club Log în fila Import/Export; stare și mod offline în README; tabelul DXCC complet rămâne planificat.
+- **2.1.0 — 2026-10-27:** Cabrillo: câmpuri suplimentare de antet și import `.log`/`.cbr` (euristic, cu avertisment); teste în `tests/cabrillo.test.mjs`. Tabelul DXCC complet rămâne planificat (`cty.dat` inaccesibil).
