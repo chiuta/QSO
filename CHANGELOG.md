@@ -6,6 +6,8 @@
 
 Nou: «Trimite la…» (fff-kit, modulul FFF.bridge) — după orice export de fișier (GPX, ICS, CSV, Markdown) apare butonul «Trimite la…» către aplicațiile compatibile, iar importul de fișiere al aplicației primește plicuri .fff.json trimise de ele, cu confirmare înainte de import. Fără rețea, fără telemetrie.
 
+- Export ADIF: antetul declară acum ADIF 3.1.8 (versiunea curentă a specificației, adif.org); câmpurile înregistrărilor trec neschimbate prin aplicație.
+
 ## 2.1.0 — 2026-10-27 (anterior: 2.0.1)
 
 - Cabrillo: antet extins conform specificației v3 (CATEGORY-ASSISTED / STATION / TIME / TRANSMITTER, LOCATION, CLUB, EMAIL, OPERATORS, ADDRESS, SOAPBOX); câmpurile goale nu se scriu; liniile multiple nu pot injecta etichete; CREATED-BY conține versiunea reală.

@@ -42,7 +42,7 @@ Helyben fut, és semmit nem küld a hálózaton (CSP `connect-src 'none'`-nal; 0
 ## Támogatott formátumok
 
 - Import: `.adi`/`.adif` (fejléccel vagy anélkül, `<EOH>`, `<EOR>`, kisbetűs címkék, típusjelző `<FREQ:9:N>`), `.adx`, `.csv` (ADIF-mezőneveket tartalmazó fejléc), `.json` (rekordok listája) és `.fff.json` (biztonsági mentés, `{"format":"fff-bundle","schema":1,"app":"qso",…}`).
-- Export: `.adi` (ADIF 3.1.4, `ADIF_VER`, `PROGRAMID` fejléccel), `.adx`, `.csv` (UTF-8 BOM-mal), `.json`, Cabrillo 3.0, `.fff.json`.
+- Export: `.adi` (ADIF 3.1.8, `ADIF_VER`, `PROGRAMID` fejléccel), `.adx`, `.csv` (UTF-8 BOM-mal), `.json`, Cabrillo 3.0, `.fff.json`.
 - Írt ADIF-mezők: STATION_CALLSIGN, OPERATOR, CALL, QSO_DATE, TIME_ON, BAND, FREQ, MODE, SUBMODE, RST_SENT, RST_RCVD, TX_PWR, MY_GRIDSQUARE, GRIDSQUARE, NAME, QTH, COMMENT, QSL_SENT, QSL_RCVD, CONTEST_ID, STX, SRX, STX_STRING, SRX_STRING, valamint bármely más importált mező.
 - Sávok (ADIF 3.1): 2190m, 630m, 560m, 160m … 10m, 8m, 6m, 5m, 4m, 2m, 1.25m, 70cm, 33cm, 23cm, 13cm, 9cm, 6cm, 3cm, az ADIF-felsorolás határaival.
 
