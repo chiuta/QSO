@@ -109,7 +109,7 @@ eq(rt.recs[1].NAME,nameDia,'NAME cu diacritice'); eq(rt.recs[1].COMMENT.replace(
 eq(rt.recs[2].SUBMODE,'USB','SUBMODE'); eq(rt.recs[2].NAME,'Hiram','record pe două linii');
 // export + octeți
 const out=await p.evaluate(adiText=>{ const F=window.__qso.Fmt; const r=F.parseAdi(adiText).records.map(F.normalizeRec); return F.toAdi(r); },adi);
-ok(/<ADIF_VER:5>3\.1\.4/.test(out)&&/<PROGRAMID:3>QSO/.test(out)&&/<EOH>/.test(out),'antet ADIF la export');
+ok(/<ADIF_VER:5>3\.1\.8/.test(out)&&/<PROGRAMID:3>QSO/.test(out)&&/<EOH>/.test(out),'antet ADIF la export');
 { const m=out.match(/<NAME:(\d+)>(Ștefan[^<]*)/); ok(m&&+m[1]===bl(nameDia)&&bl(nameDia)>nameDia.length,'lungime NAME în octeți UTF-8 ('+(m&&m[1])+'='+bl(nameDia)+', caractere '+nameDia.length+')'); }
 // toate câmpurile din export au lungimea egală cu numărul de octeți
 { const buf=Buffer.from(out,'utf8'); let i=buf.indexOf('<EOH>')+5, cnt=0, bad=0; const s=buf; 

@@ -42,7 +42,7 @@ Se ejecuta localmente y no envía nada por la red (CSP con `connect-src 'none'`;
 ## Formatos admitidos
 
 - Importación: `.adi`/`.adif` (con o sin cabecera, `<EOH>`, `<EOR>`, etiquetas en minúsculas, indicador de tipo `<FREQ:9:N>`), `.adx`, `.csv` (cabecera con nombres de campos ADIF), `.json` (lista de registros) y `.fff.json` (copia de seguridad, `{"format":"fff-bundle","schema":1,"app":"qso",…}`).
-- Exportación: `.adi` (ADIF 3.1.4, cabecera con `ADIF_VER`, `PROGRAMID`), `.adx`, `.csv` (UTF-8 con BOM), `.json`, Cabrillo 3.0, `.fff.json`.
+- Exportación: `.adi` (ADIF 3.1.8, cabecera con `ADIF_VER`, `PROGRAMID`), `.adx`, `.csv` (UTF-8 con BOM), `.json`, Cabrillo 3.0, `.fff.json`.
 - Campos ADIF escritos: STATION_CALLSIGN, OPERATOR, CALL, QSO_DATE, TIME_ON, BAND, FREQ, MODE, SUBMODE, RST_SENT, RST_RCVD, TX_PWR, MY_GRIDSQUARE, GRIDSQUARE, NAME, QTH, COMMENT, QSL_SENT, QSL_RCVD, CONTEST_ID, STX, SRX, STX_STRING, SRX_STRING, además de cualquier otro campo importado.
 - Bandas (ADIF 3.1): 2190m, 630m, 560m, 160m … 10m, 8m, 6m, 5m, 4m, 2m, 1.25m, 70cm, 33cm, 23cm, 13cm, 9cm, 6cm, 3cm, con los límites de la enumeración ADIF.
 

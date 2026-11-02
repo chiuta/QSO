@@ -44,7 +44,7 @@ It runs locally and sends nothing over the network (CSP with `connect-src 'none'
 ## Supported formats
 
 - Import: `.adi`/`.adif` (with or without a header, `<EOH>`, `<EOR>`, lowercase tags, type indicator `<FREQ:9:N>`), `.adx`, `.csv` (header with ADIF field names), `.json` (a list of records) and `.fff.json` (backup, `{"format":"fff-bundle","schema":1,"app":"qso",…}`).
-- Export: `.adi` (ADIF 3.1.4, header with `ADIF_VER`, `PROGRAMID`), `.adx`, `.csv` (UTF-8 with BOM), `.json`, Cabrillo 3.0, `.fff.json`.
+- Export: `.adi` (ADIF 3.1.8, header with `ADIF_VER`, `PROGRAMID`), `.adx`, `.csv` (UTF-8 with BOM), `.json`, Cabrillo 3.0, `.fff.json`.
 - ADIF fields written: STATION_CALLSIGN, OPERATOR, CALL, QSO_DATE, TIME_ON, BAND, FREQ, MODE, SUBMODE, RST_SENT, RST_RCVD, TX_PWR, MY_GRIDSQUARE, GRIDSQUARE, NAME, QTH, COMMENT, QSL_SENT, QSL_RCVD, CONTEST_ID, STX, SRX, STX_STRING, SRX_STRING, plus any other imported field.
 - Bands (ADIF 3.1): 2190m, 630m, 560m, 160m … 10m, 8m, 6m, 5m, 4m, 2m, 1.25m, 70cm, 33cm, 23cm, 13cm, 9cm, 6cm, 3cm, with the limits from the ADIF enumeration.
 

@@ -45,7 +45,7 @@ Rulează local, nu trimite nimic în rețea (CSP cu `connect-src 'none'`; 0 cere
 ## Formate acceptate
 
 - Import: `.adi`/`.adif` (cu sau fără antet, `<EOH>`, `<EOR>`, etichete cu litere mici, indicator de tip `<FREQ:9:N>`), `.adx`, `.csv` (antet cu nume de câmpuri ADIF), `.json` (listă de înregistrări) și `.fff.json` (copie de siguranță, `{"format":"fff-bundle","schema":1,"app":"qso",…}`).
-- Export: `.adi` (ADIF 3.1.4, antet cu `ADIF_VER`, `PROGRAMID`), `.adx`, `.csv` (UTF-8 cu BOM), `.json`, Cabrillo 3.0, `.fff.json`.
+- Export: `.adi` (ADIF 3.1.8, antet cu `ADIF_VER`, `PROGRAMID`), `.adx`, `.csv` (UTF-8 cu BOM), `.json`, Cabrillo 3.0, `.fff.json`.
 - Câmpuri ADIF scrise: STATION_CALLSIGN, OPERATOR, CALL, QSO_DATE, TIME_ON, BAND, FREQ, MODE, SUBMODE, RST_SENT, RST_RCVD, TX_PWR, MY_GRIDSQUARE, GRIDSQUARE, NAME, QTH, COMMENT, QSL_SENT, QSL_RCVD, CONTEST_ID, STX, SRX, STX_STRING, SRX_STRING, plus orice alt câmp importat.
 - Benzi (ADIF 3.1): 2190m, 630m, 560m, 160m … 10m, 8m, 6m, 5m, 4m, 2m, 1.25m, 70cm, 33cm, 23cm, 13cm, 9cm, 6cm, 3cm, cu limitele din enumerarea ADIF.
 
