@@ -1,5 +1,9 @@
 # Jurnal de modificări — QSO
 
+## 2.2.2 — 2026-11-03
+
+Destinații «Trimite către…» pentru pașaportul de învățare: adăugate FENARIUM și MENSURA (registrul de aplicații-țintă reinjectat din hub).
+
 ## 2.2.1 — 2026-11-03
 
 Pașaport de învățare comun (FFF): „Notează în pașaport”, repetări eșalonate, export/import passport/fff și certificat tipărabil auto-declarat; local, fără server.
